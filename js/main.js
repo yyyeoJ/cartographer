@@ -50,11 +50,13 @@ const rotateButton = document.querySelector("#rotatebutton");
 rotateButton.addEventListener("click",()=>{
   elements[currentElement] = rotate(elements[currentElement])
   drawElement(currentElement);
+  saveState()
 })
 
   mirrorButton.addEventListener("click",()=>{
   elements[currentElement] = mirror(elements[currentElement]);
   drawElement(currentElement);
+  saveState()
 })
 
 //restart gomb
@@ -82,7 +84,9 @@ function startGame(){
   //localstorage beolvasás
 
   if(localStorage.getItem("terkepesz") != null){
+
     terkepesz = JSON.parse(localStorage.getItem("terkepesz"))
+    
     seasonTime = terkepesz.seasonTime
     currentSeason = terkepesz.currentSeason
     seasonPoints = terkepesz.seasonPoints
@@ -722,8 +726,7 @@ function hatarvidek(){
 
 function clearState(){
 
-  localStorage.setItem("terkepesz",JSON.stringify(null))
-  l
+  localStorage.removeItem("terkepesz")
 
 }
 function saveState(){
