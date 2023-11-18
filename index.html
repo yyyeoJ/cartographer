@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A térképész</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./img/icon.png">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+
+    
+
+    <div id="mainContainer">
+
+       <div id="mapContainer">
+        <h1>Burgonya térkép</h1>
+        <table id="map"></table>
+       </div>
+
+
+
+       <div id="statsContainer">
+
+            <div id="seasonsContainer">
+
+                <div id="tavasz">
+                    <p>Tavasz</p>
+                    <p id="springPoint">0 pont</p>
+                </div>
+
+                <div id="nyar">
+                    <p>Nyár</p>
+                    <p id="summerPoint">0 pont</p>
+                </div>
+
+                <div id="osz">
+                    <p>Ősz</p>
+                    <p id="autumnPoint">0 pont</p>
+                </div>
+
+                <div id="tel">
+                    <p>Tél</p>
+                    <p id="winterPoint">0 pont</p>
+                </div>
+
+            </div>
+
+            <div id="osszpont">Összesen: 0 pont</div>
+
+            <div id="currentSeason">
+                <p>Jelenlegi évszak:</p>
+                <p id="seasonDisplay">Tavasz (AB)</p>
+            </div>
+            <hr/>
+            
+            <div id="missionsContainer">
+
+                <div class="inactive" id="mission">
+                    <img src="">
+                    <div>
+                        <h2></h2>
+                        <p></p>
+                        <p id="missionPoint">(0 pont) </p>
+                    </div>
+                    <p class="active" id="A">A</p>
+                </div>
+
+                <div class="inactive" id="mission">
+                    <img src="">
+                    <div>
+                        <h2></h2>
+                        <p></p>
+                        <p id="missionPoint">(0 pont) </p>
+                    </div>
+                    <p class="active" id="B">B</p>
+                </div>
+
+                <div class="inactive" id="mission">
+                    <img src="">
+                    <div>
+                        <h2></h2>
+                        <p></p>
+                        <p id="missionPoint">(0 pont) </p>
+                    </div>
+                    <p id="C">C</p>
+                </div>
+
+                <div class="inactive" id="mission">
+                    <img src="">
+                    <div>
+                        <h2></h2>
+                        <p></p>
+                        <p id="missionPoint">(0 pont) </p>
+                    </div>
+                    <p id="D">D</p>
+                </div>
+
+            </div>
+
+            <div id="remainingTime">
+                <p>Évszakból hátralévő idő: </p>
+                <p id="seasonTimeDisplay">7/7</p>
+            </div>
+            <hr/>
+
+
+            <div id="gameOverText" class="hidden">
+                <p>Játék vége!</p>
+                <button>Újrakezd</button>
+            </div>
+
+            <div id="toPlaceContainer">
+
+                <img id="surround" src="./img/hegykorbe.png">
+
+                <div id="buttons">
+                    <div>Lehelyezendő elem: </div>
+                    <button id="rotatebutton">Forgatás</button>
+                    <button id="mirrorbutton">Tükrözés</button>
+                </div>
+
+                <div id="elementContainer">
+
+                    <div id="timeCost">
+                        <p></p>
+                        <img src="./img/hourglass.png">
+                    </div>
+
+                    <table id="element">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+                
+                    
+            </div>
+            
+
+       </div>
+
+    </div>
+
+    
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/missions.js"></script>
+    <script type="module" src="./js/elements.js"></script>
+</body>
+</html>

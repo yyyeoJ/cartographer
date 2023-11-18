@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Risque&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-image: url("./img/theme.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div,p,button{
+    font-size: 1.3vw;
+    font-family: 'Risque', serif;
+    font-weight: bolder;
+}
+hr{
+    color:black;
+    width:100%;
+    border:2px solid black;
+}
+
+#mainContainer{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+
+}
+
+#mapContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width:48vw;
+    margin-left:2vw;
+}
+h1{
+    align-self: flex-start;
+    margin-bottom:1rem;
+}
+
+#map{
+    background-color: rgb(253, 246, 233);
+    padding:0.5rem;
+    border-radius:10px;
+    pointer-events:none;
+}
+td{
+    width:3.5vw;
+    height: 3.5vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    border-radius: 10px;
+    pointer-events: all;
+}
+
+.empty{
+    background-image: url("./img/ures.png");
+}
+.mountain{
+    background-image: url("./img/hegy.png");
+}
+.forest{
+    background-image: url("./img/erdo.png");
+}
+.town{
+    background-image: url("./img/falu.png");
+}
+.farm{
+    background-image: url("./img/farm.png");
+}
+.water{
+    background-image: url("./img/viz.png");
+}
+
+#statsContainer{
+    //border:5px solid blue;
+    display: flex;
+    flex-direction: column;
+    margin-right:2vw;
+    width:48vw;
+    align-items: center;
+    justify-content: center;
+}
+
+#seasonsContainer{
+    display: flex;
+    flex-direction: row;
+    margin-top:0.5vw;
+}
+
+#seasonsContainer>div{
+    width:6vw;
+    height: 8vh;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:0.5rem;
+}
+
+#tavasz{
+    background-color:  #70db70;
+    border:3px solid #1f7a1f;
+    
+}
+#nyar{
+    background-color:  #ffd700;
+    border:3px solid #a78e00;
+
+
+}
+#osz{
+    background-color:  #ff4500;
+    border:3px solid #982800;
+}
+#tel{
+    background-color:  #1e90ff;
+    border:3px solid #1561ad;
+}
+
+#osszpont{
+    margin-top:1vw;
+}
+
+#currentSeason,#remainingTime{
+    margin-top:1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-items:start;
+    width:100%;
+}
+#currentSeason>p,#remainingTime>p{
+    padding-right:1rem;
+    padding-left:1rem;
+}
+
+#missionsContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+#mission{
+    width:20vw;
+    height: 15vh;
+    background-color: rgba(39, 39, 39, 0.793);
+    margin:1rem;
+    border-radius: 10px;
+    
+}
+
+#missionPoint{
+    margin-top:1vh;
+}
+
+#toPlaceContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top:1rem;
+}
+
+#surround{
+    width:12vw;
+    height: auto;
+    margin-right:1vw;
+    border-radius: 10px;
+    margin-top:1.5vh;
+}
+
+
+#buttons{
+    display:flex;
+    flex-direction: column;
+}
+#buttons>div{
+    margin-bottom:4vh;
+    margin-top:4vh
+}
+#buttons>button{
+    width: 8vw;
+    height: 4vh;
+    margin-bottom:0.5rem;
+    align-self: end;
+    outline: none;
+    border:2px solid rgb(205, 205, 205);
+    border-radius: 10px;
+    background-color: white;
+    padding:1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#elementContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:2vh;
+}
+
+#timeCost{
+    background-color: white;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    margin-left:1vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+}
+
+#timeCost img{
+    width:1.1rem;
+    height: 1.1rem;
+    margin-left:3%;
+}
+
+#element{
+    background-color: white;
+    border-radius:0px 0px 10px 10px;
+    width: 100%;
+    margin-left:1rem;
+}
+#element td{
+    padding:0.5rem;
+}
+
+#mission{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+
+#mission>p{
+    position: absolute;
+    bottom:0.5rem;
+    right:1rem;
+    color:white;
+    font-size:1vw;
+}
+
+#mission>div>p{
+    font-size:0.8vw;
+    line-height: 0.8rem;
+}
+
+#mission>img{
+    width:9vw;
+    margin-right:1rem;
+    margin-left:1rem;
+    height: 9vh;
+}
+h2{
+    font-size: 1.2vw;
+    margin-bottom:1rem;
+}
+
+.placeable{
+    border: 7px solid rgb(141, 237, 141);
+}
+.occupied{
+    border: 7px solid rgb(253, 99, 99);
+    
+}
+
+
+.surrounded{
+    border: 7px solid orange;
+}
+
+.active{
+    color:rgb(46, 230, 46) !important;
+}
+
+.inactive{
+    opacity:50%;
+}
+
+
+.hidden{
+    display: none !important;
+}
+
+#gameOverText{
+    background-color:white;
+    border:2px solid black;
+    padding:1rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top:2rem;
+}
+#gameOverText>p{
+    font-size: 3vw;
+}
+#gameOverText>button{
+    border:2px solid black;
+    padding:1rem;
+    font-size:1.5vw;
+    border-radius:15px;
+    outline: none;
+    background-color: white;
+}
